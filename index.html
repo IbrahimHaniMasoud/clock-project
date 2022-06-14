@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <link rel="stylesheet" href="pro.css">
+  </head>
+  <body>
+    <div id="app">
+      <h1>Current Time</h1>
+      <div id="clock"></div>
+      <div class="create-alarm">
+        <div>Set Alarm</div>
+        <div class="form-actions">
+          <form>
+            <div class="alarm-inputs">
+              <input
+                type="number"
+                name="hour"
+                placeholder="Enter hours"
+                min="0"
+                max="12"
+                required
+              />
+              <input
+                type="number"
+                name="min"
+                min="0"
+                max="60"
+                placeholder="Enter minutes"
+                required
+              />
+              <select name="zone" required>
+                <option value="" selected disabled>Zone</option>
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </div>
+            <button onclick="addAlarm()" type="button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="active-alarm">
+      <div id="alarm-text"></div>
+    </div>
+    <table>
+        <tr>
+            <td>hour</td>
+            <td>minutes</td>
+            <td>zone</td>
+        </tr>
+        
+    </table>
+    <audio id="alarm-audio"></audio>
+  </body>
+  <script src="clock.js"></script>
+
+</html>
